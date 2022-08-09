@@ -1,0 +1,117 @@
+
+<!--  <img src="https://raw.githubusercontent.com/gabriel123434534634/public-images/main/1657475424684.jpg" style="width: 80px;border-radius: 100%;"> -->
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+            header{
+                background-color: rgb(200,142,106);
+                position: relative;
+                font-weight: 100;
+                color: rgb(50, 86, 102);
+                padding-bottom: 5px;
+            }
+            body{
+                margin: 0px;
+                font-family: "Fredoka One";
+                overflow-x: hidden;
+                background-color: rgb(52,103,126);
+                color: rgb(200,142,106);
+
+            }
+            #header{
+                width: 80px;
+                border-radius: 100%;
+                border: 2px solid black;
+            }
+            #img{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+            }
+            header h1{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                margin: 0px;
+            }
+            header h2{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                margin: 0px;
+                margin-bottom: 5px;
+            }
+            #content{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+            }
+            section{
+                min-height: 72vh;
+            }
+            #section{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-align: justify;
+                background-color: rgb(52,103,126);
+                color: rgb(200,142,106);
+            }
+            footer{
+                background-color: rgb(200,142,106);
+                position: relative;
+                font-weight: 100;
+                color: rgb(50, 86, 102);
+                padding-bottom: 5px;   
+                min-height: 10vh;
+            }
+            #instagram{
+                position: relative;
+                width: 40px;
+                vertical-align: middle;
+                margin-right: 10px;
+            }
+        </style>
+    </head>
+    <body>  
+        <header>
+            <div id="img"> 
+                <img src="https://raw.githubusercontent.com/gabriel123434534634/public-images/main/1657475424684.jpg" id="header"> 
+            </div>
+            <h1>Gabriel Gonçalves Macedo Lima</h1><br>
+            <h2 id="ASSUNTO"></h2>
+        </header>
+        <section>
+            <div id="section">
+            </div>
+        </section>
+        <footer>
+            <br>
+            <div id="img">
+                <img src="https://raw.githubusercontent.com/gabriel123434534634/public-images/main/instagram_icon.png" id="instagram">
+                <img src="https://raw.githubusercontent.com/gabriel123434534634/public-images/main/linkedin%20icon.png" id="instagram">
+                <img src="https://raw.githubusercontent.com/gabriel123434534634/public-images/main/mail_FILL0_wght400_GRAD0_opsz48.png" id="instagram">
+            </div>
+        </footer>
+    </body>
+    <script>
+        const params = new URLSearchParams(window.location.search)
+        subject = ""
+        if (params.has('subject')){
+            subject = params.get('subject')
+        }
+        body = ""
+        if (params.has('body')){
+            body = params.get('body')
+        }
+        document.getElementById('ASSUNTO').innerHTML = subject
+        document.getElementById('section').innerHTML = body
+    </script>
+</html>
